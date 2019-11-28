@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Check if you can get legal aid 
+      </h1>
+      <p>
+        Legal aid can help pay for legal advice.
+      </p>
+      <p>
+      You’ll be asked general questions about your legal problem and your income and savings. You’ll be told where you can get legal advice.
+      </p>  
+      <div class="govuk-inset-text">
+        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+      </div>
+      <a href="/choose_option.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg>
+      </a>
+      <div id="before-you-start">
+        <h3 class="govuk-heading-m">Before you start</h2>
+        <p>You can only check for non-criminal (‘civil’) cases. If you’ve been charged with a crime, ask your solicitor or barrister if you’re able to get criminal legal aid.</p>
+        <p>You’ll only get guidance on whether or not you can get legal aid - you will not get a final decision until you speak to an adviser.</p>
+          <div class="govuk-inset-text">
+          <p>Legal aid is different in <a rel="external" href="https://www.mygov.scot/legal-aid/">Scotland</a> and <a rel="external" href="http://www.dojni.gov.uk/index/legalservices/legal-services-members-of-the-public.htm">Northern Ireland.</a></p>
+          </div>
+          </div>
+      </div>
+</div>
+
+{% endblock %}

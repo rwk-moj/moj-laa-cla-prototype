@@ -16,6 +16,10 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+p {
+    margin: 0.5em 0;
+}
+
 label.search{
     margin-bottom: 0px;
     margin-top: 30px; 
@@ -39,4 +43,81 @@ form.form {
     h3 {
         margin-bottom: 5px;
     }
+}
+
+    .help-organisations h2 {
+     margin:40px 0 0
+   }
+   .help-organisations .org-list {
+    margin:20px 0;
+    padding:0;
+    list-style:none
+   }
+   .help-organisations .org-list h3 {
+    margin:0
+   }
+   .help-organisations .org-list p,
+   .help-organisations .org-list ul {
+    margin:.5em 0 0
+   }
+   .help-organisations .org-list ul {
+    list-style:disc
+   }
+   .help-organisations .org-list ul li p {
+        margin:0
+   }
+   .help-organisations .org-list ul p:first-child {
+        margin-top:0
+   }
+   .help-organisations .org-list .vcard {
+        padding:20px 0;
+        border-top:1px solid #dee0e2
+   }
+   .help-organisations .org-list .vcard:first-child {
+        border-top:0
+   }
+   .help-organisations .org-details {
+        padding:0 15px;
+        margin-top:.5em;
+        border-left:5px solid #dee0e2;
+        font-family: nta,Arial,sans-serif;
+        font-size: 19px;
+        line-height: 1.31579;
+        font-weight: 400;
+        text-transform: none;
+   
+    .help-organisations .org-details dl {
+        font-family: inherit;
+        margin:5px 0;
+        font-size:.9em
+    }
+
+   .help-organisations .org-details dt {
+    font-family: inherit;
+    font-weight:700;
+    display:inline-block;
+    margin-right:5px
+   }
+
+   .help-organisations .org-details dd {
+        display:inline-block;
+        margin:0
+   }
+
+   @media print {
+        .help-organisations .s-hidden {
+            display:block!important;
+            visibility:visible!important;
+            width:auto!important;
+            height:auto!important;
+            opacity:1!important;
+            position:static!important
+        }
+        .help-organisations .action {
+         display:none
+        }
+   }
+   .help-organisations-wrapper {
+    overflow:hidden
+   }
 }

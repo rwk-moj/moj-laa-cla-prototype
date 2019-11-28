@@ -1,0 +1,335 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Legal aid doesn’t cover all types of problem
+      </h1>
+      <p>
+        You can still ask a solicitor for help – you will have to pay for their advice. 
+      </p>
+     {% from "govuk/components/button/macro.njk" import govukButton %}
+      {{ govukButton({
+        text: "Find a solicitor"
+      }) }}
+       <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p>
+
+      <p>You may still get help and advice from the organisations listed below. You don’t have to qualify for legal aid.</p>
+    <div class="help-organisations">
+     <h2 class="govuk-heading-l">Exceptional Cases</h2>
+     <p>In exceptional cases, legal aid may still be available.</p>
+     <p>You can <a href="#">ask a legal adviser</a> if an application might succeed in your case and how to apply.</p>
+     <p>You can also <a href="#">apply directly</a> to the Legal Aid Agency. </p>
+     <h2 class="govuk-heading-l">Help organisations for problems about debt</h2>
+     <ul class="org-list">
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">   
+          <a href="https://www.nationaldebtline.org/" aria-label="National Debtline (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/National Debtline">National Debtline<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+          <div class="org-description">
+            <p class="govuk-body">National Debtline (NDL) is a national telephone helpline for people with debt problems in England, Wales and Scotland. The service is free, confidential and independent. You can get advice over the phone or by email, and relevant self-help materials are sent out for free.</p>
+          </div>
+          <div class="org-details">
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>   
+                  <span class="tel">0808 808 4000</span> 
+                </dd>
+              </dl>
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Monday - Friday, 9am-8pmSaturday, 9.30am-1pm</dd>
+              </dl>
+          </div>
+      </li>
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          <a href="http://www.moneyadviceservice.org.uk" aria-label="Money Advice Service (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Money Advice Service">Money Advice Service<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+          <div class="org-description">
+            <p>Free and impartial money advice service, set up by government. The service includes:</p>
+            <ul>
+              <li>
+                <p>online advice and guides to help improve your finances</p>
+              </li>
+              <li>
+               <p>online tools and calculators to help you keep track and plan ahead</p>
+              </li>
+              <li>
+                <p>support in person, over the phone and online</p>
+              </li>
+            </ul>
+          </div>
+          <div class="org-details">
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                    <span class="tel">0300 500 5000</span>,
+                    <span class="tel">0300 500 5555</span> (Wales)
+                </dd>
+              </dl>
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Monday - Friday, 8am-8pm
+Saturday, 9am-12pm</dd>
+              </dl>     
+          </div>     
+      </li>  
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m"> 
+        <a href="http://www.mymoneysteps.org" aria-label="My Money Steps (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/My Money Steps">My Money Steps<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        <div class="org-description">
+            <p>My Money Steps is a free online debt advice service from National Debtline. It will give you a personalised action plan to manage your debts.</p>
+          </div> 
+      </li>
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+        <a href="http://www.stepchange.org" aria-label="Step Change Debt Charity                            (formerly CCCS) (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Step Change Debt Charity                            (formerly CCCS)">Step Change Debt Charity                            (formerly CCCS)<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>Step Change Debt Charity provides free, confidential and impartial advice to people in financial distress.They can complete a full financial assessment and, if you're eligible, they will set up a debt management plan. They may also offer free advice on individual voluntary arrangements, bankruptcy and token payments.</p>
+          </div>
+        
+
+        
+        
+          <div class="org-details">
+            
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                  
+                    <span class="tel">0800 138 1111</span>
+                  
+                </dd>
+              </dl>
+            
+            
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Web 24 hours</dd>
+              </dl>
+            
+            
+          </div>
+        
+      </li>
+    <div class="js-hide">
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="https://www.citizensadvice.org.uk/" aria-label="Citizens Advice (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Citizens Advice">Citizens Advice<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>The Citizens Advice service helps people resolve their legal, money and other problems by providing free, independent and confidential advice.</p>
+          </div>
+        
+
+        
+        
+          <div class="org-details">
+            
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                  
+                    <span class="tel">03444 111 444</span> (England), 
+                  
+                    <span class="tel">03444 77 20 20</span> (Wales), 
+                  
+                    <span class="tel">03444 111 445</span> (Text Relay)
+                  
+                </dd>
+              </dl>
+            
+            
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Web 24 hours</dd>
+              </dl>
+            
+            
+          </div>
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="https://www.lawworks.org.uk/legal-advice-individuals" aria-label="LawWorks (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/LawWorks">LawWorks<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>LawWorks is a charity which aims to provide free legal help to individuals and community groups who can't afford to pay for it and who are not eligible for legal aid.</p>
+          </div>
+        
+
+        
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="http://www.gingerbread.org.uk" aria-label="Gingerbread Single Parent Helpline (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Gingerbread Single Parent Helpline">Gingerbread Single Parent Helpline<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>This free helpline provides support and advice to single parents on anything from dealing with a break-up, to going back to work or sorting out maintenance, to benefit or tax credit issues.</p>
+          </div>
+        
+
+        
+        
+          <div class="org-details">
+            
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                  
+                    <span class="tel">0808 802 0925</span>
+                  
+                </dd>
+              </dl>
+            
+            
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Mondays, 10am - 6pm
+Tuesdays/Thursdays/Fridays, 10am - 4pm
+Wednesdays, 10am-1pm and 5pm-7pm</dd>
+              </dl>
+            
+            
+          </div>
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="http://www.bdl.org.uk/" aria-label="Business Debt Line (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Business Debt Line">Business Debt Line<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>Business Debtline (BDL) is a charity that provides free, confidential and independent debt advice for the self-employed and small businesses.</p>
+          </div>
+        
+
+        
+        
+          <div class="org-details">
+            
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                  
+                    <span class="tel">0800 197 6026</span>
+                  
+                </dd>
+              </dl>
+            
+            
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Monday - Friday, 9am - 5pm</dd>
+              </dl>
+            
+            
+          </div>
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="http://www.cafamily.org.uk/" aria-label="Contact a Family (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/Contact a Family">Contact a Family<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>Contact a Family offers information and advice for families of disabled children, on any aspect of caring for a disabled child.</p>
+          </div>
+        
+
+        
+        
+          <div class="org-details">
+            
+              <dl>
+                <dt>Helpline:</dt>
+                <dd>
+                  
+                    <span class="tel">0808 808 3555</span>
+                  
+                </dd>
+              </dl>
+            
+            
+              <dl>
+                <dt>Opening hours:</dt>
+                <dd>Monday to Friday, 9.30am - 5.00pm</dd>
+              </dl>
+            
+            
+          </div>
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="http://www.gov.uk" aria-label="GOV.UK (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/GOV.UK">GOV.UK<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>Public services information, online tools and signposting to all government services.</p>
+          </div>
+        
+
+        
+        
+      </li>
+    
+      <li class="vcard s-expanded">
+        <h3 class="govuk-heading-m">
+          
+          
+  <a href="http://www.justice.gov.uk/contacts/hmcts" aria-label="HMCTS (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/HMCTS">HMCTS<span class="sr-only"> Opens in new window</span></a>
+        </h3>
+        
+          <div class="org-description">
+            <p>This online tool enables you to find a court or tribunal near you.</p>
+          </div>
+        
+
+        
+        
+      </li>
+    </div>
+  </ul>
+
+  {{ govukButton ({
+  text: 'Show 6 more',
+  href: '#',
+  classes: 'js-toggle-btn'
+}) }}
+</div>
+</div>
+
+{% endblock %}

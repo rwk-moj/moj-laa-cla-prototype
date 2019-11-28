@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form action="/check-option-debt-answer" method="post" class="form">
+        <fieldset class="govuk-fieldset" aria-describedby="check-option-debt-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-heading-xl">
+              Choose the option that best describes your debt problem
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="home-owner" name="check-option-debt" type="radio" value="home-owner" aria-describedby="check-option-debt-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="home-owner">
+                You’re a home owner, and you’re at risk of losing your home due to bankruptcy, mortgage debt or repossession
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rented" name="check-option-debt" type="radio" value="rented-accommodation" aria-describedby="check-option-debt-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="rented">
+                You’re living in rented accommodation and you’re being evicted because of a debt to your landlord
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="owe-money" name="check-option-debt" type="radio" value="owe-money" aria-describedby="check-option-debt-item-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="owe-money">
+                You owe money (for example, bank loans, credit card debt) but this is not putting your home at risk
+              </label>
+            </div>
+          </div>
+        </fieldset>
+         <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

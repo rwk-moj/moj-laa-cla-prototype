@@ -8,3 +8,11 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+
+$('.js-hide').hide();
+$('.js-toggle-btn').click(function(e) {
+  e.preventDefault();
+  $(this).hide();
+  $('.js-hide').show();
+});

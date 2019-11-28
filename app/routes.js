@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
+// routes for initial check-option screen
 router.post('/choose-option-answer', function (req, res) {
   
     let clinicalNegligence = req.session.data['choose-option']
@@ -13,7 +13,7 @@ router.post('/choose-option-answer', function (req, res) {
       res.redirect('/legal_adviser_help')
     } 
     else if (debt === 'debt') {
-        res.redirect('/check_option')
+        res.redirect('/check_option_debt')
     }
     else {
       res.redirect('/#')
@@ -21,3 +21,27 @@ router.post('/choose-option-answer', function (req, res) {
   })
 
 module.exports = router
+
+
+
+// routes for debt
+router.post('/check-option-debt-answer', function (req, res) {
+  
+  let homeOwner = req.session.data['check-option-debt']
+  let rentedAccommodation = req.session.data['check-option-debt']
+  let oweMoney = req.session.data['check-option-debt']
+
+
+  if (homeOwner === 'home-owner' || rentedAccommodation === 'rented'){
+    res.redirect('/legal_aid_availble')
+  } 
+  else if (oweMoney === 'owe-money') {
+    res.redirect('/legal_aid_refer')
+}
+  else {
+    res.redirect('/#')
+  }
+})
+
+module.exports = router
+

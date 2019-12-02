@@ -9,9 +9,11 @@
 {% block pageTitle %}
  Contact Civil Legal Advice
 {% endblock %}
+{# Dynamic back link - don't use in production #}
 {% block beforeContent %}
   {{ govukBackLink({
-    text: "Back"
+    text: "Back",
+    href: "javascript:history.back()"
   }) }}
 {% endblock %}
 {% block content %}
@@ -21,11 +23,150 @@
  <div class="govuk-inset-text">
      <p>If you’re in an emergency situation, please call the police on 999.</p>
 </div>
-<p class="govuk-body">To contact us, please call Civil Legal Advice on 0345 345 4 345. <a href="#">Call charges apply</a></p>
+<p class="govuk-body">To contact us, please call Civil Legal Advice on 0345 345 4 345. <a href="#">Call charges apply</a>.</p>
 <p class="govuk-body">You can also ask us to call you back using the form below, which is free.</p>
  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="/form-handler" method="post" novalidate>
+        {% set returnCallArea%}
+          {{ govukInsetText({
+              text: "We’ll give you the CLA phone number when you submit your details below.",
+              classes: "conditional-inset"
+          })}}
+        {% endset %}  
+        {% set selectCallBackTimeToday %} 
+          {{ govukSelect({
+            id: "call-back-time",
+            name: "call-back-time",
+            label: {
+              text: "Select a time"
+            },
+            items: [
+              {
+                value: "choose-a-time",
+                text: "Choose a time"
+              },
+              {
+                value: "1330-1400",
+                text: "1.30pm - 2.00pm"
+              },
+              {
+                value: "1400-1430",
+                text: "2.00pm - 2.30pm"
+              },
+              {
+                value: "1430-1500",
+                text: "2.30pm - 3.00pm"
+              }
+            ]
+          }) }}
+        {% endset -%}
+        {% set selectCallBackTimeOther %} 
+          {{ govukSelect({
+            id: "call-back-time-other",
+            name: "call-back-time-other",
+            label: {
+              text: "Select a time"
+            },
+            items: [
+              {
+                value: "choose-a-time",
+                text: "Choose a time"
+              },
+              {
+                value: "1530-1600",
+                text: "3.30pm - 4.00pm"
+              },
+              {
+                value: "1600-1630",
+                text: "4.00pm - 4.30pm"
+              },
+              {
+                value: "1630-1700",
+                text: "4.30pm - 5.00pm"
+              }
+            ]
+          }) }}
+        {% endset -%}
+        {% set callBackArea %}
+            <div class="content-block">
+              <ul class="govuk-list govuk-list--bullet">
+                <li>We will call at least once during your chosen time, or as close to the time as possible.</li>
+                <li>When a CLA operator calls, the call will come from an anonymous number.</li>
+                <li>If you miss the call you’ll need to complete this form again.</li>
+              </ul>
+              {{ govukInput({
+                label: {
+                  text: "UK telephone number",
+                  classes: "govuk-label--s"
+                },
+                id: "telephone-number",
+                name: "telephone-number",
+                type: "tel",
+                autocomplete: "tel",
+                classes: "govuk-input--width-20",
+                hint: {
+                  text: "Please enter full phone number including area code, using only numbers. For example 020 7946 0492"
+                }
+              }) }}
+              
+              {{ govukRadios({
+              classes: "govuk-radios--inline",
+              idPrefix: "safe-message",
+              name: "safe-message",
+              fieldset: {
+                legend: {
+                  text: "Is it safe for us to leave a message on this number?",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ]
+            }) }}
+            <div class="call-back-today">
+            {{ govukRadios({
+              classes: "govuk-radios--inline",
+              idPrefix: "call-back-date",
+              name: "call-back-date",
+              fieldset: {
+                legend: {
+                  text: "Select a time for us to call",
+                  isPageHeading: false,
+                  classes: "govuk-fieldset__legend--s"
+                }
+              },
+              items: [
+                {
+                  value: "call-today-at",
+                  text: "Call today at",
+                  conditional: {
+                    html: selectCallBackTimeToday
+                  }
+                },
+                {
+                  value: "select-time",
+                  text: "Call on",
+                  conditional: {
+                    html: selectCallBackTimeOther
+                  }
+                }
+              ]
+             
+            }) }}
+            </div>
+        </div>
+        {% endset %}
+
+
         {{ govukRadios({
           classes: "govuk-radios",
           idPrefix: "contact-pref",
@@ -34,7 +175,7 @@
             legend: {
               text: "Select a preferred contact option",
               isPageHeading: true,
-              classes: "govuk-fieldset__legend--l"
+              classes: "govuk-fieldset__legend--m"
             }
           },
           hint: {
@@ -43,11 +184,17 @@
           items: [
             {
               value: "call-cla",
-              text: "I'll call CLA"
+              text: "I'll call CLA",
+              conditional: {
+                html: returnCallArea
+              }
             },
             {
               value: "call-me",
-              text: "Call me back"
+              text: "Call me back",
+              conditional: {
+                html: callBackArea
+              }
             },
             {
               value: "someone-else",

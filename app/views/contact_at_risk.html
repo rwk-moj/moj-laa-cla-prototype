@@ -152,7 +152,51 @@
           }
         }) }}
 
-        {{ govukCheckboxes({
+
+        {# Conditional boxes for contact #}
+        {% set selectLanguageArea %} 
+          {{ govukSelect({
+            id: "sort",
+            name: "sort",
+            label: {
+              text: "Choose a language"
+            },
+            items: [
+              {
+                value: "droidspeak",
+                text: "Droidspeak"
+              },
+              {
+                value: "ewokese",
+                text: "Ewokese",
+                selected: true
+              },
+              {
+                value: "huttese",
+                text: "Huttese"
+              },
+              {
+                value: "sith",
+                text: "Sith"
+              }
+            ]
+          }) }}
+        {% endset -%}
+
+        {% set textCommsAreaHtml %}
+          {{ govukTextarea({
+            name: "more-detail",
+            id: "more-detail",
+            label: {
+              text: "Please tell us how we can help in the box"
+            },
+            hint: {
+              text: "Do not include personal or financial information."
+            }
+          }) }}
+        {% endset -%}  
+
+        {{ govukCheckboxes({          
           idPrefix: "communicationNeeds",
           name: "communicationNeeds",
           fieldset: {
@@ -184,11 +228,17 @@
             },
             {
               value: "other-lang",
-              text: "Other language"
+              text: "Other language",
+              conditional: {
+                html: selectLanguageArea
+              }
             },
             {
               value: "other-comms-needs",
-              text: "Other communication needs"
+              text: "Other communication needs",
+              conditional: {
+                html: textCommsAreaHtml
+              }
             }
           ]
         }) }}

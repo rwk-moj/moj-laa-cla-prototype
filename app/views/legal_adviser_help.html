@@ -3,16 +3,21 @@
 {% block pageTitle %}
  Find a legal adviser
 {% endblock %}
-
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
 {% block content %}
 <h1 class="govuk-heading-xl rwk">
   A legal adviser may be able to help you
 </h1>
-<p>You will usually only get legal aid for advice about clinical negligence if your child has suffered a brain injury during pregnancy, birth or in the first 8 weeks of life.
-<p>You should contact a legal aid adviser in your area, who may be able to help.
+<p class="govuk-body">You will usually only get legal aid for advice about clinical negligence if your child has suffered a brain injury during pregnancy, birth or in the first 8 weeks of life.
+<p class="govuk-body">You should contact a legal aid adviser in your area, who may be able to help.
 </p>
-<p>Your adviser will check whether you qualify for legal aid at no cost to you by asking about your problem and your finances. In some cases you may need to pay a contribution towards your legal aid.</p>
-<p><a href="#">What did you think of this service?</a> (takes 30 seconds) </p>
+<p class="govuk-body">Your adviser will check whether you qualify for legal aid at no cost to you by asking about your problem and your finances. In some cases you may need to pay a contribution towards your legal aid.</p>
 <div class="moj-search">
     <form action="#" method="post">
     <div class="govuk-form-group">
@@ -31,6 +36,7 @@
     </div>
     </form>
   </div> 
-  <p> Your session will time out after 30 minutes of inactivity. We do this for your security. </p>
+  <p class="govuk-body"><a href="#">What did you think of this service?</a> (takes 30 seconds) </p>
+  <p class="govuk-body"> Your session will time out after 30 minutes of inactivity. We do this for your security. </p>
 
 {% endblock %}

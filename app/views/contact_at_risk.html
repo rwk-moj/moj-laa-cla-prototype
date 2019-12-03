@@ -61,6 +61,33 @@
             ]
           }) }}
         {% endset -%}
+        {% set selectCallBackDate %} 
+          {{ govukSelect({
+            id: "call-back-time-other",
+            name: "call-back-time-other",
+            label: {
+              text: "Select a date"
+            },
+           items: [
+              {
+                value: "choose-a-date",
+                text: "Choose a date"
+              },
+              {
+                value: "mon-02-dec",
+                text: "Monday 2 December"
+              },
+              {
+                value: "tue-03-dec",
+                text: "Tuesday 3 December"
+              },
+              {
+                value: "wed-04-dec",
+                text: "Wednesday 4 December"
+              }
+            ]
+          }) }}
+        {% endset -%}
         {% set selectCallBackTimeOther %} 
           {{ govukSelect({
             id: "call-back-time-other",
@@ -156,6 +183,7 @@
                   value: "select-time",
                   text: "Call on",
                   conditional: {
+                    html: selectCallBackDate,
                     html: selectCallBackTimeOther
                   }
                 }

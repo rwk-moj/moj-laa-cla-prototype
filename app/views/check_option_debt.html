@@ -4,7 +4,13 @@
 {% block pageTitle %}
   Check if you can get legal aid
 {% endblock %}
-
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">

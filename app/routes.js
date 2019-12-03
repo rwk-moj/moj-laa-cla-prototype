@@ -8,7 +8,6 @@ router.post('/choose-option-answer', function (req, res) {
     let communityCare = req.session.data['choose-option']
     let debt = req.session.data['choose-option']
 
-  
     if (clinicalNegligence === 'clinical-negligence' || communityCare === 'community-care') {
       res.redirect('/legal_adviser_help')
     } 
@@ -23,7 +22,6 @@ router.post('/choose-option-answer', function (req, res) {
 module.exports = router
 
 
-
 // routes for debt
 router.post('/check-option-debt-answer', function (req, res) {
   
@@ -31,14 +29,13 @@ router.post('/check-option-debt-answer', function (req, res) {
   let rentedAccommodation = req.session.data['check-option-debt']
   let oweMoney = req.session.data['check-option-debt']
 
-
-  if (homeOwner === 'home-owner' || rentedAccommodation === 'rented'){
-    res.redirect('/legal_aid_availble')
+  if (homeOwner === 'home-owner' || rentedAccommodation === 'rented-accommodation'){
+    res.redirect('/legal_aid_available')
   } 
   else if (oweMoney === 'owe-money') {
     res.redirect('/legal_aid_refer')
 }
-  else {
+  else {;
     res.redirect('/#')
   }
 })

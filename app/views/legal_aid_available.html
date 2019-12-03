@@ -1,6 +1,11 @@
-
 {% extends "layout.html" %}
-
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
 {% block pageTitle %}
   Check if you can get legal aid
 {% endblock %}
@@ -10,32 +15,46 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Check if you can get legal aid 
+        Legal aid is available for this type of problem
       </h1>
-      <p>
-        Legal aid can help pay for legal advice.
+      <p class="govuk-body govuk-!-font-weight-bold">
+        However, you must also qualify financially. 
       </p>
-      <p>
-      You’ll be asked general questions about your legal problem and your income and savings. You’ll be told where you can get legal advice.
-      </p>  
+      <p class="govuk-body">
+        If you do qualify financially, you’ll be able to speak to Civil Legal Advice (CLA), a national helpline for certain legal aid problems in England and Wales. 
+      </p>
+      <p class="govuk-body">
+        The CLA operator will check all the information you’ve given through this service. You’ll need to provide evidence of your finances and a specialist will ask you about your case in more detail before your application can progress.  
+      </p>
+      <h2 class="govuk-heading-l">To qualify for legal aid</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your income (or combined income if you have a partner) shouldn’t be more than £2,657 a month before tax</li>
+        <li>your savings (or combined savings if you have a partner) shouldn’t be more than £8,000</li>
+      </ul>
       <div class="govuk-inset-text">
-        It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+        These limits can vary in certain circumstances – for example, if you need advice about domestic abuse.
       </div>
-      <a href="/choose_option.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-        Start now
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-        </svg>
-      </a>
-      <div id="before-you-start">
-        <h3 class="govuk-heading-m">Before you start</h2>
-        <p>You can only check for non-criminal (‘civil’) cases. If you’ve been charged with a crime, ask your solicitor or barrister if you’re able to get criminal legal aid.</p>
-        <p>You’ll only get guidance on whether or not you can get legal aid - you will not get a final decision until you speak to an adviser.</p>
-          <div class="govuk-inset-text">
-          <p>Legal aid is different in <a rel="external" href="https://www.mygov.scot/legal-aid/">Scotland</a> and <a rel="external" href="http://www.dojni.gov.uk/index/legalservices/legal-services-members-of-the-public.htm">Northern Ireland.</a></p>
-          </div>
-          </div>
-      </div>
+      <p class="govuk-body">
+        To complete the financial assessment, you and your partner (if you have one) will need:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>recent payslips (if you’re working) and bank statements</li>
+        <li>a summary of your income tax and National Insurance contributions</li>
+        <li>details of any savings and investments you have</li>
+        <li>details of any benefits you receive</li>
+        <li>mortgage statements and a current valuation for any property you own</li>
+      </ul>
+      <p class="govuk-body">
+        If you’re under 18, you should <a href="#" class="govuk-link">contact CLA</a> without completing the financial assessment.   
+      </p>
+      <p class="govuk-body">
+        If you’re deaf or hard of hearing you can book a <a href="#" class="govuk-link">British Sign Language interpreter</a> by completing a request form. Once complete, the operator will get back to you to complete the eligibility check and provide any further advice. 
+      </p>
+      {{ govukButton({
+        text: "Check if you qualify financially"
+      }) }}
+      <hr class="govuk-section-break govuk-section-break">
+       <h3 class="govuk-heading-m">Alternatively, you can ask a legal aid adviser to take on your case</h3>
 </div>
 
 {% endblock %}

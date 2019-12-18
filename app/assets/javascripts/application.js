@@ -9,10 +9,19 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
-
+// code for the additional contact services 'end of journey' pages
 $('.js-hide').hide();
 $('.js-toggle-btn').click(function(e) {
   e.preventDefault();
   $(this).hide();
   $('.js-hide').show();
 });
+
+// code for the upload multiple docs design
+if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
+  new MOJFrontend.MultiFileUpload({
+  container: $('.moj-multi-file-upload'),
+  uploadUrl: '/ajax-upload-url',
+  deleteUrl: '/ajax-delete-url'
+  });
+}

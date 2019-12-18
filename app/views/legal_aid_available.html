@@ -58,28 +58,53 @@
        <p class="govuk-body">Your adviser will check whether you qualify for legal aid at no cost to you by asking about your problem and your finances. If you qualify, in some cases you may need to pay a contribution towards your legal aid.</p>
        <p class="gov-uk"><a href="https://checklegalaid.service.gov.uk/find-a-legal-adviser?category=debt">Find a legal advisor near you</a>.</p>
        <h2 class="govuk-heading-l">Other sources of help</h2>
-       <ul class="org-list">
-        <li class="vcard s-expanded">
-          <h3 class="govuk-heading-m">   
-            <a href="https://www.nationaldebtline.org/" aria-label="National Debtline (Opens in new window)" rel="external" target="_blank" title="Opens in new window" class="url" data-ga="event:External Link Clicked/click/National Debtline">National Debtline</a>
-          </h3>
-            <div class="org-description">
-              <p class="govuk-body">National Debtline (NDL) is a national telephone helpline for people with debt problems in England, Wales and Scotland. The service is free, confidential and independent. You can get advice over the phone or by email, and relevant self-help materials are sent out for free.</p>
-            </div>
-            <div class="org-details">
-                <dl>
-                  <dt>Helpline:</dt>
-                  <dd>   
-                    <span class="tel">0808 808 4000</span> 
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>Opening hours:</dt>
-                  <dd>Monday - Friday, 9am-8pm Saturday, 9.30am-1pm</dd>
-                </dl>
-            </div>
-        </li>
-      </ul>
+            
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              text: "National Debtline"
+            },
+            content: {
+              html: "<p class='govuk-body'>National Debtline (NDL) is a national telephone helpline for people with debt problems in England, Wales and Scotland. The service is free, confidential and independent. You can get advice over the phone or by email, and relevant self-help materials are sent out for free.</p>              
+              <p class='govuk-body'>
+                Textphone:<br>
+                <strong class='govuk-!-font-weight-bold'>0808 157 3909</strong>
+              </p>
+              <p class='govuk-body'>
+                Outside UK:<br>
+                <strong class='govuk-!-font-weight-bold'>+44 0808 157 0192</strong>
+              </p>
+              "
+            }
+          },
+          {
+            heading: {
+              text: "Writing well for specialists"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+            }
+          },
+            {
+            heading: {
+              text: "Know your audience"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+            }
+          },
+            {
+            heading: {
+              text: "How people read"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for How people read.</p>"
+            }
+          }
+        ]
+      }) }}
 </div>
 
 {% endblock %}

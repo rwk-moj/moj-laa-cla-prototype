@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Find a legal adviser
+{% endblock %}
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block content %}
+​
+​
+<div class="flash-card">
+  <header>
+    <h1 class="govuk-heading-xl">Legal aid doesn’t cover all types of problem</h1>
+  </header>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="how-to-renew" data-id="how-to-renew-uk">
+        <li>
+          <p style="color: #fff;">
+            You can still ask a solicitor for help – you will have to pay for their advice.</p>
+        </li>
+        <li>
+          <div class="govuk-inset-text">
+            <h2 class="govuk-heading-m" style="padding-top: 10px; margin-bottom: 20px;">In exceptional cases, legal aid may still be available</h2>
+            <p style="color: #fff;">You can ask a legal adviser(opens in a new window) if an application might succeed in your case and how to apply</p> 
+            <p style="color: #fff;">You can also apply directly(opens in a new window) to the Legal Aid Agency.</p>
+          </div>
+           <a href="dashboard" role="button" id="continue" class="govuk-button form-button">
+        Find a solicitor</a>​
+        </li>
+​        <li>
+            <p style="color: #fff;" class="govuk-!-bold"><a href="#" class="govuk-link" style="">Help organisations for problems about debt</a>.</p>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

@@ -12,32 +12,35 @@
 {% endblock %}
 {% block content %}
 ​
-​
-<div class="flash-card">
-  <header>
-    <h1 class="govuk-heading-xl">Legal aid doesn’t cover all types of problem</h1>
-  </header>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <ul class="how-to-renew" data-id="how-to-renew-uk">
-        <li>
-          <p style="color: #fff;">
-            You can still ask a solicitor for help – you will have to pay for their advice.</p>
-        </li>
-        <li>
-          <div class="govuk-inset-text">
-            <h2 class="govuk-heading-m" style="padding-top: 10px; margin-bottom: 20px;">In exceptional cases, legal aid may still be available</h2>
-            <p style="color: #fff;">You can ask a legal adviser(opens in a new window) if an application might succeed in your case and how to apply</p> 
-            <p style="color: #fff;">You can also apply directly(opens in a new window) to the Legal Aid Agency.</p>
+​ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="flash-card">
+        <header>
+          <h1 class="govuk-heading-xl">Legal aid doesn’t cover all types of problem</h1>
+        </header>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <ul class="how-to-renew" data-id="how-to-renew-uk">
+              <li>
+                <p style="color: #fff;">
+                  You can still ask a solicitor for help – you will have to pay for their advice.</p>
+              </li>
+              <li>
+                <div class="govuk-inset-text">
+                  <h2 class="govuk-heading-m" style="padding-top: 10px; margin-bottom: 20px;">In exceptional cases, legal aid may still be available</h2>
+                  <p style="color: #fff;">You can <a href="#"  style="font-weight:bold;">ask a legal adviser</a> if an application might succeed in your case and how to apply</p> 
+                  <p style="color: #fff;">You can also <a href="#" style="font-weight:bold;">apply directly</a> to the Legal Aid Agency.</p>
+                </div>
+                <a href="dashboard" role="button" id="continue" class="govuk-button form-button">
+              Find a solicitor</a>​
+              </li>
+      ​        <li>
+                  <p style="color: white">You may still get <a href="#" class="govuk-link" style="color:#fff; text-decoration:underline;">help and advice from a help organisation for problems about debt.</a></p>
+              </li>
+            </ul>
           </div>
-           <a href="dashboard" role="button" id="continue" class="govuk-button form-button">
-        Find a solicitor</a>​
-        </li>
-​        <li>
-            <p style="color: white">You may still get <a href="#" class="govuk-link" style="color:#fff; text-decoration:underline;">help and advice from a help organisation for problems about debt.</a></p>
-        </li>
-      </ul>
+        </div>
       </div>
-    </div>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}

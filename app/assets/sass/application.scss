@@ -209,3 +209,25 @@ form.form {
       text-align: center;
     }
   
+  .option1 {
+      border: 2px solid govuk-colour("white");
+      padding: 15px;
+      margin-top: 30px;
+      background-color: govuk-colour("white");
+    }
+  .print {
+    margin-top: 20px;
+    
+    a {
+      color: govuk-colour("white");
+    }
+  }
+
+ .govuk-panel__body {
+
+  p, a {
+    margin-top: 20px;
+    color: #fff;
+  }
+
+ }

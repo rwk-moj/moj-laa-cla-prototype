@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Find a legal adviser
+{% endblock %}
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block content %}
+​
+​ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% set mainClasses = "govuk-main-wrapper--l" %}
+          <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              We will call you back
+            </h1>
+            <div class="govuk-panel__body">
+              Your reference number<br><strong>PF-2472-57669</strong>
+            </div>
+            {# <p class="option1">
+              You can now call CLA on <strong>0345 345 4 345</strong>
+              <br />
+              Please quote your reference number when you call. Find out about <a href="#">call charges</a>.
+            </p> #}
+            <p class="print"><a href="#">Print this page</a></p>
+          </div>
+          {{ govukInput({
+            label: {
+              text: "Receive this confirmation by email",
+              classes: "govuk-label--m"
+            },
+            hint: {
+              text: "Your email"
+            },
+            classes: "bins",
+            id: "email",
+            name: "email",
+            type: "email",
+            autocomplete: "email",
+            attributes: {
+              spellcheck: "false"
+            }
+          }) }}
+          {{ govukButton({
+            text: "Send"
+          }) }}
+          {{ govukWarningText({
+            text: "If you have a court hearing date it is important that you get advice as soon as possible. You may be able to get last-minute help on the day of the hearing from an adviser in the court building.",
+            iconFallbackText: "Warning"
+          }) }}          <h2 class="govuk-heading-l">What happens next</h2>
+          <p class="govuk-body">
+            Your details have been submitted and an operator will call the person you nominated at least once during your chosen time, or as close to the time as possible. <strong>(Wednesday, 15 January 2020 at 15:00)</strong>. When a CLA operator calls, the call will come from an anonymous number.
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>The first person you speak to will be an operator who will ask about your problem and your financial circumstances.</li>
+            <li> If it looks like you might qualify for legal aid you'll be put through to a specialist adviser, who will make the final decision on your case.</li>
+            <li>You will need to provide evidence of your financial circumstances and maybe your problem. Your specialist adviser will explain what is needed.</li>
+            <li>If your specialist adviser thinks you need to speak to someone in person or have someone represent you in court, they will organise this.</li>
+          </ul>
+          <p class="govuk-body">
+            If we can do anything to make it easier for you to communicate with us, please tell the operator. 
+          </p>
+          <p class="govuk-body">
+            <strong>If CLA can't help you, we'll always suggest where else you might get help.</strong>
+          </p>
+          <p class="govuk-body">
+            Protecting your personal data and your privacy statement is important to us. Read the full <a href="#">Civil Legal Advice Privacy Statement</a>. 
+          </p>
+          <button class="govuk-button" data-module="govuk-button">Complete satisfaction survey</button>
+          <h2 class="govuk-heading-l">What if I miss the operator's call?</h2>
+          <p class="govuk-body">
+           If you miss the call or you need advice urgently, you can call us on 0345 345 4 345. Find out about <a href="#">call charges</a>.
+          </p>
+          <div class="govuk-inset-text">
+            Your session will time out after 30 minutes of inactivity. We do this for your security.
+          </div>
+          <p class="govuk-body">
+            <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+          </p>
+  </div>
+</div>
+{% endblock %}

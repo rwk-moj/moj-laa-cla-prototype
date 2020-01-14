@@ -25,7 +25,7 @@
             <p class="option2">
               You can now call CLA on <strong>0345 345 4 345</strong>
               <br />
-              Please quote your reference number when you call. Find out about <a href="#">call charges</a>.
+              Please quote your reference number when you call.
             </p>
             <p class="print"><a href="#">Print this page</a></p>
           </div>
@@ -34,7 +34,10 @@
               A confirmation email with your reference number has been sent to <strong>name.surname@email.com</strong>
             </p>
           </div>
-          <p class="govuk-body">If you have a court hearing date it is important that you get advice as soon as possible. You may be able to get last-minute help on the day of the hearing from an adviser in the court building.</p>
+          {{ govukWarningText({
+            text: "If you have a court hearing date it is important that you get advice as soon as possible. You may be able to get last-minute help on the day of the hearing from an adviser in the court building.",
+            iconFallbackText: "Warning"
+          }) }}
           <h2 class="govuk-heading-l">What happens next</h2>
           <ul class="govuk-list govuk-list--bullet">
             <li>The first person you speak to will be an operator who will ask about your problem and your financial circumstances.</li>
@@ -51,7 +54,7 @@
           <p class="govuk-body">
             Protecting your personal data and your privacy statement is important to us. Read the full <a href="#">Civil Legal Advice Privacy Statement</a>. 
           </p>
-          <button class="govuk-button" data-module="govuk-button">Finish your application</button>
+          <button class="govuk-button" data-module="govuk-button">Complete a satisfaction survey</button>
           <div class="govuk-inset-text">
             Your session will time out after 30 minutes of inactivity. We do this for your security.
           </div>

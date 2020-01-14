@@ -215,6 +215,16 @@ form.form {
       margin-top: 30px;
       background-color: govuk-colour("white");
     }
+    .option2 {
+      border: 2px solid govuk-colour("white");
+      padding: 15px;
+      margin-top: 30px;
+      color: govuk-colour("white");
+
+      a {
+        color: inherit;
+      }
+    }
   .print {
     margin-top: 20px;
     
@@ -229,5 +239,27 @@ form.form {
     margin-top: 20px;
     color: #fff;
   }
-
  }
+
+ .cla-sub {
+    border: 2px solid govuk-colour("green");
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+    p, a {
+      margin-top: 20px;
+      color: #fff;
+    }
+ }
+ .email-conf {
+  padding: 20px;
+  background-color: govuk-colour("white");
+  color: govuk-colour("black");
+  border: 2px solid govuk-colour("green");
+  margin-bottom: 20px;
+  text-align: center;
+
+  p {
+    margin-bottom: 0px;
+  }
+}

@@ -275,3 +275,37 @@ ul.page-menu {
     }
   }
 }
+
+
+// SCOPE OPTIONS
+
+ul.scope-options-list {
+  padding-inline-start: 0px;
+
+  li.scope-options-list-item {
+      margin-bottom: 10px;
+      background-color: #dee0e2;
+      padding: 13px 60px 10px 25px;
+      position: relative;
+      list-style-type: none;
+
+      a.scope-panel {
+        text-decoration: none;
+      }
+      h2, p {
+        margin-bottom: 0.25em;
+      }
+  }
+  li.scope-options-list-item:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto;
+    width: 42px;
+    height: 42px;
+    background: url(/Users/robertking/Documents/Development/projects/lla-check-prototype/app/assets/images/chevron_right.svg) 0% no-repeat;
+    content: '';
+    opacity: 1;
+  }
+}

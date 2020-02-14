@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="moj-width-container">
+    {# <a href="index.html" class="govuk-back-link">Back</a> #}
+    <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds cla">
+          <h1 class="govuk-heading-xl">
+              What is your housing problem about?
+          </h1>
+          <ul class="scope-options-list">
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_aid_available.html" role="button">
+                <h2 class="govuk-heading-m">Becoming homeless</h2>
+                <p class="govuk-body">You are at risk of becoming homeless within 56 days and you want to make an application to your local council to stop your home being taken away from you.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_aid_available.html" role="button">
+                <h2 class="govuk-heading-m">Eviction</h2>
+                <p class="govuk-body">You are being evicted from your home</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_aid_available.html" role="button">
+                <h2 class="govuk-heading-m">Losing your accommodation</h2>
+                <p class="govuk-body">You’re losing your accommodation because UK Visas and Immigration (UKVI) is refusing to support you or is withdrawing its support from you.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/choose_option_panel_housing_2_disrepair.html" role="button">
+                <h2 class="govuk-heading-m">Your home is in a serious state of disrepair</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_aid_available.html" role="button">
+                <h2 class="govuk-heading-m">Harassment</h2>
+                 <p class="govuk-body">Your landlord or neighbour is harassing you.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/choose_option_panel_housing_2_injunction.html" role="button">
+                <h2 class="govuk-heading-m">Contesting an injunction for antisocial behaviour</h2>
+                 <p class="govuk-body">Contesting an injunction for antisocial behaviour.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/choose_option_panel_discrimination.html" role="button">
+                <h2 class="govuk-heading-m">Discrimination</h2>
+                 <p class="govuk-body">Being treated unfairly because of eg your race, gender or sexual orientation.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_aid_refer.html" role="button">
+                <h2 class="govuk-heading-m">None of the above</h2>
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-inset-text">
+            Your session will time out after 30 minutes of inactivity. We do this for your security.
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+          <p class="gov-body">If you’re having trouble completing this form, <a href="#">get in touch</a></p>.
+      </div>
+    </div>
+    </main>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,6 +1,11 @@
 
 {% extends "layout.html" %}
-
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
 {% block pageTitle %}
   Check if you can get legal aid
 {% endblock %}
@@ -17,20 +22,8 @@
           <ul class="scope-options-list">
             <li class="scope-options-list-item">
               <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Clinical negligence</h2>
-                <p class="govuk-body">Problems with your medical care and treatment.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Community care</h2>
-                <p class="govuk-body">You’re unhappy with the care you or a relative are getting due to disability, age or special educational needs eg in a care home or your own home.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/choose_option_panel_debt" role="button">
-                <h2 class="govuk-heading-m">Debt</h2>
-                <p class="govuk-body">Bankruptcy, repossession, mortgage debt that is putting your home at risk.</p>
+                <h2 class="govuk-heading-m">Family</h2>
+                <p class="govuk-body">Divorce, separation, dissolution, financial arrangements, family mediation, arrangements for your children, children being taken into care, child abduction.</p>
               </a>
             </li>
             <li class="scope-options-list-item">
@@ -41,14 +34,14 @@
             </li>
             <li class="scope-options-list-item">
               <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Discrimination</h2>
-                <p class="govuk-body">Being treated unfairly because of eg your race, gender or sexual orientation.</p>
+                <h2 class="govuk-heading-m">Housing</h2>
+                <p class="govuk-body">Eviction, homelessness, losing your rented home, rent arrears, harassment by a landlord or neighbour, health and safety issues with your home.</p>
               </a>
             </li>
             <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Education</h2>
-                <p class="govuk-body">Special educational needs, problems with school places, exclusions, learning difficulties.</p>
+              <a class="scope-panel" href="/choose_option_panel_debt" role="button">
+                <h2 class="govuk-heading-m">Debt</h2>
+                <p class="govuk-body">Bankruptcy, repossession, mortgage debt that is putting your home at risk.</p>
               </a>
             </li>
             <li class="scope-options-list-item">
@@ -59,14 +52,8 @@
             </li>
             <li class="scope-options-list-item">
               <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Family</h2>
-                <p class="govuk-body">Divorce, separation, dissolution, financial arrangements, family mediation, arrangements for your children, children being taken into care, child abduction.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/choose_option_panel_housing.html" role="button">
-                <h2 class="govuk-heading-m">Housing</h2>
-                <p class="govuk-body">Eviction, homelessness, losing your rented home, rent arrears, harassment by a landlord or neighbour, health and safety issues with your home.</p>
+                <h2 class="govuk-heading-m">Discrimination</h2>
+                <p class="govuk-body">Being treated unfairly because of eg your race, gender or sexual orientation.</p>
               </a>
             </li>
             <li class="scope-options-list-item">
@@ -77,26 +64,8 @@
             </li>
             <li class="scope-options-list-item">
               <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Mental health</h2>
-                <p class="govuk-body">Help with mental health and mental capacity legal issues.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Personal injury</h2>
-                <p class="govuk-body">An accident that was not your fault.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Public law</h2>
-                <p class="govuk-body">Taking legal action against a public body, like your local council.</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Trouble with the police and other public authorities</h2>
-                <p class="govuk-body">You’ve been treated wrongly by the police or other authorities with the power to detain, imprison or prosecute you.</p>
+                <h2 class="govuk-heading-m">Education</h2>
+                <p class="govuk-body">Special educational needs, problems with school places, exclusions, learning difficulties.</p>
               </a>
             </li>
             <li class="scope-options-list-item">

@@ -1,0 +1,77 @@
+
+{% extends "layout.html" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="moj-width-container">
+    {# <a href="index.html" class="govuk-back-link">Back</a> #}
+    <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds cla">
+          <h1 class="govuk-heading-xl">
+              On what grounds have you been discriminated against?
+          </h1>
+          <ul class="scope-options-list">
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Age</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Disability</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Gender, gender reassignment or sexual orientation</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Marriage or civil partnership</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Pregnancy or maternity</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Race</h2>
+                <p class="govuk-body">Including nationality, citizenship, ethnicity or national origin.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">Religion, belief or lack of religion or belief</h2>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">None of the above</h2>
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-inset-text">
+            Your session will time out after 30 minutes of inactivity. We do this for your security.
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+          <p class="gov-body">If you’re having trouble completing this form, <a href="#">get in touch</a></p>.
+      </div>
+    </div>
+    </main>
+  </div>
+</div>
+
+{% endblock %}

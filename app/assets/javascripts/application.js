@@ -25,3 +25,12 @@ if(typeof MOJFrontend.MultiFileUpload !== 'undefined') {
   deleteUrl: '/ajax-delete-url'
   });
 }
+
+function hideCookies() {
+  var x = document.getElementById("global-cookie-message");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 

@@ -316,3 +316,29 @@ ul.scope-options-list {
     opacity: 1;
   }
 }
+
+
+//COOKIES 
+.gem-c-cookie-banner__wrapper {
+  // background-color: $govuk-colour("white");
+  padding: 20px 0;
+  box-sizing: border-box;
+
+  .govuk-grid-column-one-half-from-desktop {
+    padding: 0px;
+    float: none;
+    width: auto;
+    display: inline;
+    margin-right: 15px;
+  }
+
+  .govuk-button {
+    display: inline;
+    margin-bottom: 0px;
+    width: auto;
+    float: none;
+  }
+}
+.gem-c-cookie-banner__confirmation {
+  display: none;
+}

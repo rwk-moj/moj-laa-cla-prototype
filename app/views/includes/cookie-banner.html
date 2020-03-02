@@ -1,7 +1,28 @@
-{% if shouldShowCookieMessage %}
-  <div class="app-cookie-banner">
-    <p class="app-cookie-banner__message">
-      {{cookieText | safe }}
-    </p>
+{# {% if shouldShowCookieMessage %} #}
+  <div id="global-cookie-message" class="gem-c-cookie-banner govuk-clearfix" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet="" style="display: block;">
+  <div class="gem-c-cookie-banner__wrapper govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class=" govuk-grid-column-two-thirds">
+        <div class="gem-c-cookie-banner__message">
+          <span class="govuk-heading-m">Cookies on Check if you can get Legal Aid</span>
+          <p class="govuk-body">We use cookies <a class="govuk-link" href="/help/cookies">to collect information</a> about how you use this service and to make the website work as well as possible.</p>
+        </div>
+        <div class="gem-c-cookie-banner__buttons">
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-accept govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+          <button onClick="hideCookies()" class="gem-c-button govuk-button gem-c-button--inline" type="submit" data-module="track-click" data-accept-cookies="true" data-track-category="cookieBanner" data-track-action="Cookie banner accepted">Accept all cookies</button>
+          </div>
+          <div class="gem-c-cookie-banner__button gem-c-cookie-banner__button-accept govuk-grid-column-full govuk-grid-column-one-half-from-desktop">
+          <button class="gem-c-button govuk-button gem-c-button--inline govuk-button--secondary" type="submit" data-module="track-click" data-accept-cookies="true" data-track-category="cookieBanner" data-track-action="Cookie banner accepted">Set cookie preferences</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-{% endif %}
+    <div class="gem-c-cookie-banner__confirmation govuk-width-container" tabindex="-1">
+      <p class="gem-c-cookie-banner__confirmation-message">
+        You’ve accepted all cookies. You can <a class="govuk-link" href="/help/cookies" data-module="track-click" data-track-category="cookieBanner" data-track-action="Cookie banner settings clicked from confirmation">change your cookie settings</a> at any time.
+      </p>
+      <button class="gem-c-cookie-banner__hide-button" data-hide-cookie-banner="true" data-module="track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner">Hide</button>
+  </div>
+</div>
+{# {% endif %} #}

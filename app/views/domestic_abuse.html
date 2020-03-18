@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+  <div class="moj-width-container">
+    {# <a href="index.html" class="govuk-back-link">Back</a> #}
+    <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds cla">
+          <h1 class="govuk-heading-xl">
+              Choose the option that best describes your debt problem
+          </h1>
+          <ul class="scope-options-list">
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">You’re a home owner</h2>
+                <p class="govuk-body">At risk of losing your home due to bankruptcy, mortgage debt or repossession.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">You’re living in rented accommodation</h2>
+                <p class="govuk-body">Being evicted because of a debt to your landlord.</p>
+              </a>
+            </li>
+            <li class="scope-options-list-item">
+              <a class="scope-panel" href="/legal_adviser_help" role="button">
+                <h2 class="govuk-heading-m">You owe money</h2>
+                <p class="govuk-body">For (example, bank loans, credit card) debt but this is not putting your home at risk.</p>
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-inset-text">
+            Your session will time out after 30 minutes of inactivity. We do this for your security.
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+          <p class="gov-body">If you’re having trouble completing this form, <a href="#">get in touch</a>.</p>
+      </div>
+    </main>
+        </div>
+      <div class="moj-quick-exit">
+        {{ govukButton({
+          text: "Quick exit",
+          classes: 'exit'
+        }) }}
+      </div>
+  </div>
+</div>
+{% endblock %}

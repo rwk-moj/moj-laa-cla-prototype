@@ -363,6 +363,10 @@ ul.scope-options-list {
   .quick-exit-wrapper {
     position: fixed;
 
+    @media (max-width: 769px) {
+      bottom: 0;
+    }
+
     button#exit {
       margin-bottom: 15px;
     }

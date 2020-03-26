@@ -8,60 +8,73 @@
 {% block content %}
   <div class="moj-width-container">
     {# <a href="index.html" class="govuk-back-link">Back</a> #}
-    <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds cla">
-          <h1 class="govuk-heading-xl">
-              Choose the option that best describes your debt problem
-          </h1>
-          <ul class="scope-options-list">
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Domestic abuse</h2>
-                <p class="govuk-body">You want to protect yourself or your children against domestic abuse (including psychological, physical, financial, sexual or emotional abuse)</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Enforcing an injunction</h2>
-                <p class="govuk-body">Your partner or ex-partner is ignoring an injunction you have taken out against them</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Harassment</h2>
-                <p class="govuk-body">You are being harassed by a partner, ex-partner or family member</p>
-              </a>
-            </li>
-            <li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Contesting an injunction</h2>
-                <p class="govuk-body">You want to contest an injunction that has been taken out against you</p>
-              </a>
-            </li><li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Female genital mutilation</h2>
-                <p class="govuk-body">You’re worried that you may become a victim of female genital mutilation</p>
-              </a>
-            </li><li class="scope-options-list-item">
-              <a class="scope-panel" href="/legal_adviser_help" role="button">
-                <h2 class="govuk-heading-m">Any other problem</h2>
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-inset-text">
-            Your session will time out after 30 minutes of inactivity. We do this for your security.
+        {# <div class="moj-quick-exit">
+            <div class="quick-exit-wrapper">
+              {{ govukButton({
+                text: "Quick exit",
+                classes: 'exit'
+              }) }}
+              <p class="exit-info">Close window and clear your browser history</p>
           </div>
-          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
-          <p class="gov-body">If you’re having trouble completing this form, <a href="#">get in touch</a>.</p>
-      </div>
-    </main>
+        </div> #}
+        <div class="moj-quick-exit">
+          <div class="quick-exit-wrapper">
+            <button id="exit" class="govuk-button govuk-button--warning">
+              Quick exit
+            </button>
+          </div>
+          <button class="govuk-button govuk-button--warning" style="visibility: hidden;">
+            Quick exit
+          </button>
         </div>
-      <div class="moj-quick-exit">
-        {{ govukButton({
-          text: "Quick exit",
-          classes: 'exit'
-        }) }}
+        <main class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds cla">
+              <h1 class="govuk-heading-xl">
+                  Choose the option that best describes your debt problem
+              </h1>
+              <ul class="scope-options-list">
+                <li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Domestic abuse</h2>
+                    <p class="govuk-body">You want to protect yourself or your children against domestic abuse (including psychological, physical, financial, sexual or emotional abuse)</p>
+                  </a>
+                </li>
+                <li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Enforcing an injunction</h2>
+                    <p class="govuk-body">Your partner or ex-partner is ignoring an injunction you have taken out against them</p>
+                  </a>
+                </li>
+                <li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Harassment</h2>
+                    <p class="govuk-body">You are being harassed by a partner, ex-partner or family member</p>
+                  </a>
+                </li>
+                <li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Contesting an injunction</h2>
+                    <p class="govuk-body">You want to contest an injunction that has been taken out against you</p>
+                  </a>
+                </li><li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Female genital mutilation</h2>
+                    <p class="govuk-body">You’re worried that you may become a victim of female genital mutilation</p>
+                  </a>
+                </li><li class="scope-options-list-item">
+                  <a class="scope-panel" href="/legal_adviser_help" role="button">
+                    <h2 class="govuk-heading-m">Any other problem</h2>
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-inset-text">
+                Your session will time out after 30 minutes of inactivity. We do this for your security.
+              </div>
+              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+              <p class="gov-body">If you’re having trouble completing this form, <a href="#">get in touch</a>.</p>
+          </div>
+        </main>
       </div>
   </div>
 </div>

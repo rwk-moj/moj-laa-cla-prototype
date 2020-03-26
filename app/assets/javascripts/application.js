@@ -35,3 +35,9 @@ function hideCookies() {
   }
 } 
 
+$("#exit").on("click", function() {
+  var deletingAll = browser.history.deleteAll()
+  window.open("http://bbc.co.uk/weather", "_newtab");
+  window.location.replace('http://regia.org');
+  deleteAllHistory();
+});

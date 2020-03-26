@@ -20,3 +20,11 @@
 {% if useAutoStoreData %}
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
+
+{# Script for the exit button #}
+<script>
+  $("#exit").on("click", function() {
+  window.open("http://bbc.co.uk/weather", "_newtab");
+  window.location.replace('https://google.com');
+});
+</script>

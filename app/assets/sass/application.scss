@@ -351,24 +351,34 @@ ul.scope-options-list {
 }
 
 //QUICK EXIT
+.govuk-width-container {
+  position: relative;
+}
+
 .moj-quick-exit {
-  position: fixed;
-  position: -webkit-sticky;
   float: right;
-  right: 15px;   
-  top: 50%;
-  bottom: 50%;
+  z-index: 999;
+  position: relative;
 
-  @media (max-width: 769px) {
-    bottom: 0;
-    top: auto;
-    height: auto;
+  .quick-exit-wrapper {
+    position: fixed;
+
+    .exit {
+      background: govuk-colour("red");
+      width: 100%;
+      margin-bottom: 15px;    
+    } 
+    p.exit-info {
+      display: none;
+      font-size: 15px;
+      text-align: right;
+      margin: 0px;
+
+      @media (max-width: 769px) {
+        display: none;
+      }
+    }
   }
-
-  .exit {
-    background: govuk-colour("red");
-    width: 100%;
-  } 
 }
 .moj-quick-exit--2 {
     position: fixed;

@@ -36,8 +36,11 @@ function hideCookies() {
 } 
 
 $("#exit").on("click", function() {
-  var deletingAll = browser.history.deleteAll()
   window.open("http://bbc.co.uk/weather", "_newtab");
   window.location.replace('http://regia.org');
-  deleteAllHistory();
 });
+
+function deleteAllHistory() {
+  var deletingAll = browser.history.deleteAll();
+  deletingAll.then(onDeleteAll);
+}

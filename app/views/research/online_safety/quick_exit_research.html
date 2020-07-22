@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+ Quick exit / Hide this page
+{% endblock %}
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl rwk">
+  Quick exit / Hide this page
+</h1>
+  <h2 class="govuk-heading-l">What are we proposing</h2>
+    <p class="govuk-body">We are looking to implement a pattern, utilising the existing button component, that allows high risk users to quickly and safely exit from any service on the Government’s website that is used by high risk and vulnerable users.</p>
+    <p class="govuk-body">The functionality behind the design pattern would allow a user to quickly jump to an ambiguous webpage, such as BBC Weather or another such website, that would not draw attention to browsing habits from a perpetrator.</p>
+    <h3 class="govuk-heading-m">User Story</h3>
+    {{ govukInsetText({
+      classes: 'user-story',
+      text: "As someone who is at risk, I need to quickly and safely be able to change or close my browser window and clear my browser history to prevent someone else from seeing my screen and search history."
+    }) }}
+    <p class="govuk-body">We are working with the Department for Work and Pensions, the Cabinet Office and the Scottish Government to improve and unify this pattern. More information comments can be viewed on the <a title="Github Design System Issue 213" href="/https://github.com/alphagov/govuk-design-system-backlog/issues/213">Design System backlog issue #213</a></p>
+  <h2 class="govuk-heading-l">What has been done so far</h2>
+    <p class="govuk-body">The Check Legal Aid team have created an MVP design on specific areas of the service where vulnerable users may need to exit or hide the webpage. This work has been tested with a subject matter expert (SME) who has provided various levels of feedback on the work so far.
+    <h3 class="govuk-heading-m">MVP design work</h3>
+    <img src="/images/quick_exit.gif" alt="Animated image of quick exit button working">
+    <p class="govuk-body">This testing and feedback has been <a href="https://miro.com/app/board/o9J_ktl_oUE=/">captured in a Miro board</a></p>
+    <h3 class="govuk-heading-m">Summary highlights from SME</h3>
+    <p class="govuk-body">Hightlights from the Miro board are captured below.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Nice and clear button</li>
+      <li>Button isn't intrusive as you can just scroll down without pressing it</li>
+      <li>The button is better than other organisations that use a similar thing</li>
+      <li>Wording is concise and doesn't take long to scan</li>
+      <li>Use of the red colour is perfect to use as a quick escape</li>
+    </ul>
+    <div class="govuk-inset-text">Victims of DA are used to using their reptilian brain and are in fight or flight mode so the red would be a trigger for them to draw their to attention to it.
+    </br>
+    <small><strong>- Comment from SME</strong></small>
+    </div>
+  <h2 class="govuk-heading-l">Next steps</h2>
+    <p class="govuk-body"><a href="#">What did you think of this service?</a> (takes 30 seconds) </p>
+    <p class="govuk-body"> Your session will time out after 30 minutes of inactivity. We do this for your security. </p>
+{% endblock %}

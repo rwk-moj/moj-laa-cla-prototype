@@ -334,7 +334,7 @@ ul.scope-options-list {
   .govuk-grid-column-one-half-from-desktop {
     padding: 0px;
     float: none;
-    width: auto;
+    // width: auto;
     display: inline;
     margin-right: 15px;
   }
@@ -342,7 +342,7 @@ ul.scope-options-list {
   .govuk-button {
     display: inline;
     margin-bottom: 0px;
-    width: auto;
+    // width: auto;
     float: none;
   }
 }
@@ -403,3 +403,21 @@ ul.scope-options-list {
   } 
 }
 
+// Research pages design
+.user-story {
+  font-size: 1.75rem;
+  max-width: 60%;
+  font-weight: 600;
+  border-left: 10px solid govuk-colour("purple");
+
+  @media (max-width: 769px) {
+      max-width: 100%;
+      font-size: 1.25rem;
+  }
+}
+.exit_gif {
+  background-image: url(./images/quick_exit.gif);
+  width: 320px;
+  height: 100%;
+  display: block;
+}

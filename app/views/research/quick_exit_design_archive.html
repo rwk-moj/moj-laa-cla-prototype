@@ -22,54 +22,30 @@
       classes: 'user-story',
       text: "As someone who is at risk, I need to quickly and safely be able to change or close my browser window and clear my browser history to prevent someone else from seeing my screen and search history."
     }) }}
-    <p class="govuk-body">We are working with the Department for Work and Pensions, the Cabinet Office and the Scottish Government to improve and unify this component, with a wider view to look at patterns of use. More information comments can be viewed on the <a title="Github Design System Issue 213" href="/https://github.com/alphagov/govuk-design-system-backlog/issues/213">Design System backlog issue #213</a></p>
+    <p class="govuk-body">We are working with the Department for Work and Pensions, the Cabinet Office and the Scottish Government to improve and unify this pattern. More information comments can be viewed on the <a title="Github Design System Issue 213" href="/https://github.com/alphagov/govuk-design-system-backlog/issues/213">Design System backlog issue #213</a></p>
   <h2 class="govuk-heading-l">What has been done so far</h2>
     <p class="govuk-body">The Check Legal Aid team have created an MVP design on specific areas of the service where vulnerable users may need to exit or hide the webpage. This work has been tested with a subject matter expert (SME) who has provided various levels of feedback on the work so far.
     <h3 class="govuk-heading-m">MVP design work</h3>
     <p class="govuk-body">We have iterated twice on this design component on our live service, looking at language and functionality.</p>
     <h4 class="govuk-heading-m"><strong>1. Design</strong></h4>
-    <figure class="mobile">
-      <img src="/public/images/qe_v2_design_mobile.png" class="research-img mobile" alt="Image of quick exit on mobile" />
-      <figcaption>Quick exit design version 2 on mobile device</figcaption>
-    </figure>
-    <p class="govuk-body">This is our second iteration of the design. We looked to extend the GOV.UK <a href="https://design-system.service.gov.uk/components/button/">Button component</a> to act as the interactive element that a user would press to exit the website.</p>    
+    <p class="govuk-body">This was our first design concept. We looked to extend the GOV.UK <a href="https://design-system.service.gov.uk/components/button/">Button component</a> to act as the interactive element that a user would press to exit the website.</p>    
     <p class="govuk-body">The Design System suggests using red for any destructive actions undertaken on a GOV.UK website - as the intention for the Quick Exit button was essentially closing the webpage down, it would be deemed destructive.</p>
     <p class="govuk-body">We have <a href="#">experimented with alternative designs around use of colour</a>, however decided to keep the red button. This element on the design has been taken forward by DWP and potentially the Scottish Government.</p>
-    <p class="govuk-body">We decided to utilise the additional space available in the 1/3 column, which is ususally reserved for additional information as it allowed us to present the button within immediate view for the user. The button would then "sticky" in position at the bottom of the page on smaller devices.</p>
-    <div class="challenges">
-      <p class="govuk-body"><strong>Challenges</strong></p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Iterate on the button overlaying content that appears in the side navigation column</li>
-        <li>Continue work to unify the exact size of the button</li>
-        <li>Explore positioning the button at the top of the users device on mobile</li>
-      </ul>
-    </div>
+    <p class="govuk-body">We decided to utilise the additional space available in the 1/3 column, which is ususally reserved for additional information as it allowed us to present the button within immediate view for the user. The button would then "sticky" in position at the top of the page on smaller devices.</p>
+    <p>used 'Quick Exit' to infer that a user can leave the website quickly and safely. This language is used on the National Centre for Domestic Abuse Helpline website, but a mix of the wording is used across other charities and organisations.</p>
     <h4 class="govuk-heading-m"><strong>2. Content / Language</strong></h4>
     <p class="govuk-body">The language used in the button has recently been changed in order to create a more unified style as we continue to work with DWP, Cabinet Office and the Scottish Government. The use of 'Hide this page' presented more of a sense of immediacy, as well as being more descriptive of what the button actually does when the user interacts with the button.</p>
     <p class="govuk-body">We also use a keyboard function for the user to be able to interact with the button which is controlled by pressing the 'Esc' key.</p>
-    <div class="challenges">
-      <p class="govuk-body"><strong>Challenges</strong></p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Finalise language of component</li>
-        <li>Look at whether we need to include esc key content</li>
-      </ul>
-    </div>
-    <h4 class="govuk-heading-m"><strong>3. Behaviour / Functionality</strong></h4>
-    <p class="govuk-body">We have explored several types of behaviour for the button, however in order to provide the greatest amount of safety for users we decided to implement functionality similar to other charities and organisations.</p>
-    <p class="govuk-body">When a user interacts with the button, they are sent to a new browser tab that opens BBC Weather. The original tab that they were on doesn't close, but redirects to Google.</p>
-    <div class="challenges">
-      <p class="govuk-body"><strong>Challenges</strong></p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Make sure the functionality works without Javascript</li>
-        <li>Explore making the browser on mobile devices opens a new tab</li>
-      </ul>
-    </div>
     <figure>
-      <img src="/public/images/qe_v2_design.png" class="research-img" alt="Image of quick exit being used on desktop" />
-        <figcaption>Quick exit design version 2 on desktop device</figcaption>
+      <img src="/public/images/exit_mobile.png" class="research-img mobile" alt="Image of quick exit on mobile" />
+      <figcaption>Quick exit design version 1 on mobile device</figcaption>
+    </figure>
+    <figure>
+      <img src="/public/images/qe_v1_design.png" class="research-img" alt="Image of quick exit being used on desktop" />
+        <figcaption>Quick exit design version 1 on mobile device</figcaption>
     </figure>
     <p class="govuk-body">This testing and feedback has been <a href="https://miro.com/app/board/o9J_ktl_oUE=/">captured in a Miro board</a></p>
-    <h2 class="govuk-heading-l">Summary highlights from SME</h2>
+    <h3 class="govuk-heading-m">Summary highlights from SME</h3>
     <p class="govuk-body">Hightlights from the Miro board are captured below.</p>
     <p class="govuk-body"><strong>What worked well</strong></p>
     <ul class="govuk-list govuk-list--bullet">
@@ -90,7 +66,6 @@
     </div>
   <h2 class="govuk-heading-l">Next steps</h2>
     <p class="govuk-body">We are continuing to work with DWP, Cabinet Office but also the Scottish Government who have used this functionality on their new website for quite some time.</p>
-    <p class="govuk-body">The button has been reviewed by Digital Accessibility Centre specialists, and we will be making improvements to improve the user experience for assistive technologies.</p>
     <p class="govuk-body">In addition to this, there is an Online Safety Working Group, which is made up of representatives in DWP, GDS, Cabinet Office and MoJ who meet monthly to discuss how we can ensure users of Government services online can be kept safe.</p>
 
 

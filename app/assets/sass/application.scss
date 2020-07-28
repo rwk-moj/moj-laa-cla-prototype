@@ -16,6 +16,10 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+// Variables
+$img-margin: 0px 10px 5px 0px;
+
 p {
     margin: 0.5em 0;
 }
@@ -415,9 +419,31 @@ ul.scope-options-list {
       font-size: 1.25rem;
   }
 }
-.exit_gif {
-  background-image: url(./images/quick_exit.gif);
-  width: 320px;
-  height: 100%;
-  display: block;
+.challenges {
+  padding: 15px;
+  background: #e2e0e0;
+  width: fit-content;
+  margin: 0 0 15px 0;
 }
+.research-img {
+  max-width: 100%;
+  margin: $img-margin;
+  border: 1px solid #e2e0e0;
+}
+.research-img.mobile {
+  max-width: 320px;
+  width: 320px;
+}
+
+figure {
+  margin: 0px 0px 5px 15px;
+  float: right;
+
+  figcaption {
+      margin: 0px 10px 20px 0px;
+      font-size: 15px;
+      color: gray;
+      font-family: "GDS Transport", Arial, sans-serif;
+  }
+}
+

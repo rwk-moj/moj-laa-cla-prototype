@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
- Quick exit / Hide this page
+ Hide this page
 {% endblock %}
 {# Dynamic back link - don't use in production #}
 {% block beforeContent %}
@@ -14,41 +14,41 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl rwk">
-      Quick exit / Hide this page
+      Hide this page
     </h1>
       <h2 class="govuk-heading-l">What are we proposing</h2>
-        <p class="govuk-body">We are looking to implement a pattern, utilising the existing button component, that allows high risk users to quickly and safely exit from any service on the Government’s website that is used by high risk and vulnerable users.</p>
-        <p class="govuk-body">The functionality behind the design pattern would allow a user to quickly jump to an ambiguous webpage, such as BBC Weather or another such website, that would not draw attention to browsing habits from a perpetrator.</p>
+        <p class="govuk-body">We are looking to implement a pattern, using the existing button component, that allows vulnerable users of a government service or website to quickly and safely hide the page and avoid putting themselves at risk.</p>
+        <p class="govuk-body">The functionality behind the design pattern would allow a user to quickly hide the current page and open a new, ambiguous webpage, such as BBC Weather or another such website. This would lower the risk of drawing attention to browsing habits from a perpetrator.</p>
         <h3 class="govuk-heading-m">User Story</h3>
         {{ govukInsetText({
           classes: 'user-story',
           text: "As someone who is at risk, I need to quickly and safely be able to change or close my browser window and clear my browser history to prevent someone else from seeing my screen and search history."
         }) }}
-        <p class="govuk-body">We are working with the Department for Work and Pensions, the Cabinet Office and the Scottish Government to improve and unify this component, with a wider view to look at patterns of use.</p> 
-        <p>More information comments can be viewed on the <a title="Github Design System Issue 213" href="/https://github.com/alphagov/govuk-design-system-backlog/issues/213">Design System backlog issue #213</a></p>
+        <p class="govuk-body">We are working with the Department for Work and Pensions, the Cabinet Office and the Scottish Government to improve and unify this component.</p> 
+        <p>More information comments can be viewed on the <a title="Github Design System Issue 213" href="https://github.com/alphagov/govuk-design-system-backlog/issues/213">Design System backlog issue #213</a></p>
       <h2 class="govuk-heading-l">What has been done so far</h2>
         <p class="govuk-body">The Check Legal Aid team have created an MVP design on specific areas of the service where vulnerable users may need to exit or hide the webpage. This work has been tested with a subject matter expert (SME) who has provided various levels of feedback on the work so far.</p>
         <h3 class="govuk-heading-m">MVP design work</h3>
         <p class="govuk-body">We have iterated twice on this design component on our live service, looking at language and functionality.</p>
         <h4 class="govuk-heading-m"><strong>1. Design</strong></h4>
         <figure class="mobile">
-          <img src="/public/images/qe_v2_design_mobile.png" class="research-img mobile" alt="Image of quick exit on mobile" />
-          <figcaption>- Quick exit design version 2 on mobile device</figcaption>
+          <img src="/public/images/qe_v2_design_mobile.png" class="research-img mobile" alt="Image of 'Hide this page' on mobile" />
+          <figcaption>- 'Hide this page' design version 2 on mobile device</figcaption>
         </figure>
         <p class="govuk-body">This is our second iteration of the design. We looked to extend the GOV.UK <a href="https://design-system.service.gov.uk/components/button/">Button component</a> to act as the interactive element that a user would press to exit the website.</p>    
-        <p class="govuk-body">The Design System suggests using red for any destructive actions undertaken on a GOV.UK website - as the intention for the Quick Exit button was essentially closing the webpage down, it would be deemed destructive.</p>
+        <p class="govuk-body">The Design System suggests using red for any destructive actions undertaken on a GOV.UK website - as the intention for the 'Hide this page' button was essentially closing the webpage down, it would be deemed destructive.</p>
         <p class="govuk-body">We have <a href="#">experimented with alternative designs around use of colour</a>, however decided to keep the red button. This element on the design has been taken forward by DWP and potentially the Scottish Government.</p>
-        <p class="govuk-body">We decided to utilise the additional space available in the 1/3 column, which is usually reserved for additional information as it allowed us to present the button within immediate view for the user. The button would then "sticky" in position at the bottom of the page on smaller devices.</p>
+        <p class="govuk-body">We decided to utilise the additional space available in the 1/3 column, which is usually reserved for additional information as it allowed us to present the button within immediate view for the user. The button would then be "sticky" in position at the bottom of the page on smaller devices.</p>
         <div class="challenges">
           <p class="govuk-body"><strong>Challenges</strong></p>
           <ul class="govuk-list govuk-list--bullet">
             <li>Iterate on the button overlaying content that appears in the side navigation column</li>
             <li>Continue work to unify the exact size of the button</li>
-            <li>Explore positioning the button at the top of the users device on mobile</li>
+            <li>Explore positioning the button at the top of the user's device on mobile</li>
           </ul>
         </div>
         <h4 class="govuk-heading-m"><strong>2. Content / Language</strong></h4>
-        <p class="govuk-body">The language used in the button has recently been changed in order to create a more unified style as we continue to work with DWP, Cabinet Office and the Scottish Government. The use of 'Hide this page' presented more of a sense of immediacy, as well as being more descriptive of what the button actually does when the user interacts with the button.</p>
+        <p class="govuk-body">The language used in the button has recently been changed in order to create a more unified style as we continue to work with DWP, Cabinet Office and the Scottish Government. The use of 'Hide this page' presented more of a sense of immediacy, as well as being more descriptive of what the button actually does when the user interacts with the button, so we have moved away from 'Quick Exit'.</p>
         <p class="govuk-body">We also use a keyboard function for the user to be able to interact with the button which is controlled by pressing the 'Esc' key.</p>
         <div class="challenges">
           <p class="govuk-body"><strong>Challenges</strong></p>
@@ -64,14 +64,15 @@
           <p class="govuk-body"><strong>Challenges</strong></p>
           <ul class="govuk-list govuk-list--bullet">
             <li>Make sure the functionality works without Javascript</li>
-            <li>Explore making the browser on mobile devices opens a new tab</li>
+            <li>Explore making the browser on mobile devices open a new tab</li>
           </ul>
         </div>
         <figure>
-          <img src="/public/images/qe_v2_design.png" class="research-img" alt="Image of quick exit being used on desktop" />
-            <figcaption>- Quick exit design version 2 on desktop device</figcaption>
+          <img src="/public/images/qe_v2_design.png" class="research-img" alt="Image of 'Hide this page' being used on desktop" />
+            <figcaption>- 'Hide this page' design version 2 on desktop device</figcaption>
         </figure>
         <h2 class="govuk-heading-l">Summary highlights from SME</h2>
+        <p class="govuk-body">This testing and feedback has been <a href="https://miro.com/app/board/o9J_ktl_oUE=/">captured in a Miro board</a></p>
         <p class="govuk-body">Hightlights from the Miro board are captured below.</p>
         <p class="govuk-body"><strong>What worked well</strong></p>
         <ul class="govuk-list govuk-list--bullet">
@@ -86,21 +87,21 @@
           <li>On a mobile the button didn't open the site in a new tab.</li>
           <li>On a desktop the button hides some of the side information.</li>
         </ul>
-        <div class="govuk-inset-text">Victims of DA are used to using their reptilian brain and are in fight or flight mode so the red would be a trigger for them to draw their to attention to it.
+        <div class="govuk-inset-text">Victims of Domestic Abuse are used to using their reptilian brain and are in fight or flight mode so the red would be a trigger for them to draw their to attention to it.
         </br>
         <small><strong>- Comment from SME</strong></small>
         </div>
-        <p class="govuk-body">This testing and feedback has been <a href="https://miro.com/app/board/o9J_ktl_oUE=/">captured in a Miro board</a></p>
       <h2 class="govuk-heading-l">Data analytics</h2>
-        <p class="govuk-body">The Quick Exit / Hide this page button has been running as an MVP on the Check Legal Aid service since 14 April 2020. It has been used fairly often, however at present we are unable to crystal the quality of the data.</p>
+        <p class="govuk-body">The 'Hide this page' button has been running as an MVP on the Check Legal Aid service since 14 April 2020. It has been used fairly often, however at present we are are yet to analyse the data in more data.</p>
         <figure>
-          <img src="/public/images/qe_ga_data.jpg" class="research-img" alt="Image of graph data of Quick Exit button use since 14 April 2020" />
-            <figcaption>- Graph data of Quick Exit button use since 14 April 2020</figcaption>
+          <img src="/public/images/qe_ga_data.jpg" class="research-img" alt="Image of graph data of 'Hide this page' button use since 14 April 2020" />
+            <figcaption>- Graph data of 'Hide this page' button use since 14 April 2020</figcaption>
         </figure>
       <p class="govuk-body"><strong>Assumptions based on data</strong></p>
         <ul class="govuk-list govuk-list--bullet">
           <li>The 'Esc' button is rarely used - do we still need it?</li>
           <li>Mobile users use the button more than desktop - do we need to focus on mobile first functionality?</li>
+          <li>Are mobile users accidentally pressing the button due to positioning?</li>
           <li>Use of the button is spread relatively evenly across the country - how can we analyse that information?</li>
         </ul>
       <h2 class="govuk-heading-l">Next steps</h2>

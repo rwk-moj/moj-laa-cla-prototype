@@ -1,0 +1,55 @@
+.moj-datastore_banner {
+  @include govuk-font(16);
+  @include govuk-text-colour;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  padding-top: govuk-spacing(3);
+  padding-right: govuk-spacing(3);
+  padding-bottom: govuk-spacing(3);
+  padding-left: govuk-spacing(3);
+  background-color:  $govuk-brand-colour;
+  color: govuk-colour("white");
+
+  a {
+    color: govuk-colour("white") !important;
+  }
+}
+
+.moj-datastore__message {
+  margin: 0;
+  @include govuk-width-container;
+}
+
+.govuk-notification-banner {
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+  border: 5px solid #1d70b8;
+  font-family: "GDS Transport",Arial,sans-serif;
+
+  .govuk-notification-banner__title {
+    font-family: "GDS Transport",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    // font-size: 18px;  -- Removed font size as it forces a smaller font on the prototype
+    // font-size: 1.125rem;
+    line-height: 1.11111;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .govuk-notification-banner__body p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+// @include govuk-media-query($media-type: print) {
+//   .app-cookie-banner {
+//     display: none !important;
+//   }
+// }

@@ -3,8 +3,7 @@
   @include govuk-text-colour;
 
   box-sizing: border-box;
-  width: 100%;
-  margin-top: 20px;
+  width: 100%;  
 
   padding-top: govuk-spacing(3);
   padding-right: govuk-spacing(3);
@@ -13,9 +12,14 @@
   background-color:  $govuk-brand-colour;
   color: govuk-colour("white");
 
+  p.govuk-body {
+    color: govuk-colour("white");
+    margin-bottom: 0px;
+  }
   a {
     color: govuk-colour("white") !important;
   }
+  
 }
 
 .moj-datastore__message {

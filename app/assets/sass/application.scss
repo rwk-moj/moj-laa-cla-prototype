@@ -43,6 +43,9 @@ form.form {
         margin-top: 0.75em;
     }
 }
+.govuk-fieldset {
+  margin-bottom: 30px;
+}
 .govuk-fieldset__legend, .govuk-label:not(.govuk-radios__label):not(.govuk-checkboxes__label) {
   font-weight: 700;
 }
@@ -450,3 +453,23 @@ figure {
   }
 }
 
+.sidebar {
+  margin-top: 40px;
+  border-top: 10px solid govuk-colour("blue");  
+
+  h2 {
+    margin: 0 0 10px;
+    padding-top: 15px;
+    font-size: 22px;
+  }
+}
+dl.govuk-list.govuk-list--bullet dt {
+  font-weight: 700;
+  padding: 1em 0 .5em;
+}
+dl.govuk-list.govuk-list--bullet dd {
+  list-style-type: disc;
+  display: list-item;
+  padding-left: 6px;
+  margin-left: 20px;
+}

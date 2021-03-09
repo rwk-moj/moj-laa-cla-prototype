@@ -1,0 +1,61 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+       <form action="/disregarded-funds" method="post" class="form">
+        <fieldset class="govuk-fieldset inline" aria-describedby="disregarded-funds" data-required data-error="Please choose an option to continue">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Have you received any additional disregarded funds?
+            </h1> 
+            
+          </legend>
+          {# <span class="govuk-hint">The information you enter won’t be stored on this device. Find out more about <a href="#">staying safe online</a>.</span> #}
+          <div class="govuk-radios govuk-radios--inline ">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes-funds" name="choose-option" type="radio" value="yes-funds" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="yes-funds">
+                Yes
+              </label>
+              {# <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                 Problems with your medical care and treatment
+              </span> #}
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-funds" name="choose-option" type="radio" value="no-funds" aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="no-funds">
+                No
+              </label>
+              {# <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                You’re unhappy with the care you or a relative are getting due to disability, age or special educational needs eg in a care home or your own home
+              </span> #}
+            </div>
+        </fieldset>
+        {{ govukDetails({
+              summaryText: "What counts as diregarded funds",
+              html: "<dl class='govuk-list govuk-list--bullet'>
+                      <dt>Do not include monies received from the following schemes</dt>
+                        <dd>Infected Blood Support Scheme</dd>
+                        <dd>Vaccine Damage Payment</dd>
+                        <dd>Variant Creutzfeldt-Jakob Disease (“vCJD”) Trust</dd>
+                        <dd>Criminal Injuries Compensation Scheme</dd>
+                        <dd>National Emergencies Trust</dd>
+                        <dd>London Emergencies Trust</dd>
+                        <dd>We Love Manchester Emergency Fund</dd>
+                    </dl>"
+        }) }}
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+      </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+{# Dynamic back link - don't use in production #}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block pageTitle %}
+  Check if you can get legal aid
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Legal aid is available for this type of problem
+      </h1>
+      <p class="govuk-body-l">However, you must also qualify financially.</p>
+      <p class="govuk-body">
+          If you do qualify financially, you’ll be able to speak to Civil Legal Advice (CLA),
+          a national helpline for certain legal aid problems in England and Wales.
+        </p>
+      <p class="govuk-body">
+        The CLA operator will check all the information you’ve given through this service.
+        You’ll need to provide evidence of your finances and a specialist will ask you about your case in more detail before your application can progress.
+      </p>
+      <p class="govuk-body">To complete the financial assessment, you and your partner (if you have one) will need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>recent payslips (if you’re working) and bank statements</li>
+        <li>a summary of your income tax and National Insurance contributions</li>
+        <li>details of any savings and investments you have</li>
+        <li>details of any benefits you receive</li>
+        <li>mortgage statements and a current valuation for any property you own</li>
+      </ul>
+      <p class="govuk-body">If you’re under 18, you should <a class="govuk-link" href="/contact">contact CLA</a>without completing the financial assessment.</p>
+      <p class="govuk-body">
+      If you’re deaf or hard of hearing you can book a <a class="govuk-link" href="http://www.interpretingline.co.uk/vbooking.html" rel="external">British Sign Language interpreter</a> by completing a request form.  Once complete, the operator will get back to you to complete the eligibility check and provide any further advice.
+      </p>
+      <a class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" href="disregarded_funds_q.html" role="button">Check if you qualify financially
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+      <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+      </svg>
+      </a>
+      
+      {# Before you start section #}
+      <h2 class="govuk-heading-m">Before you start</h2>
+      <p class="govuk-body">Alternatively, you can ask a legal aid adviser to take on your case.</p>
+      <p class="govuk-body">
+        Your adviser will check whether you qualify for legal aid at no cost to you by asking about your problem and your finances.
+        If you qualify, in some cases you may need to pay a contribution towards your legal aid.
+      </p>
+      <p class="govuk-body"><a class="govuk-link" href="/find-a-legal-adviser?category=debt" data-ga="event:External Link Clicked/click/Find a legal adviser">Find a legal adviser</a></p>
+
+      {# Help organisations section   #}
+      <div class="help-organisations" data-truncate="1" data-name="Debt">
+      <h2 class="govuk-heading-m">Other sources of help</h2>
+      <p class="govuk-body">    
+          You can also get advice from alternative help organisations for issues related to debt. You don’t have to qualify for legal aid.</p>
+       <h2 class="govuk-heading-l">Other sources of help</h2>     
+      {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              text: "National Debtline"
+            },
+            content: {
+              html: "<p class='govuk-body'>National Debtline (NDL) is a national telephone helpline for people with debt problems in England, Wales and Scotland. The service is free, confidential and independent. You can get advice over the phone or by email, and relevant self-help materials are sent out for free.</p>              
+              <p class='govuk-body'>
+                Textphone:<br>
+                <strong class='govuk-!-font-weight-bold'>0808 157 3909</strong>
+              </p>
+              <p class='govuk-body'>
+                Outside UK:<br>
+                <strong class='govuk-!-font-weight-bold'>+44 0808 157 0192</strong>
+              </p>
+              "
+            }
+          },
+          {
+            heading: {
+              text: "Writing well for specialists"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+            }
+          },
+            {
+            heading: {
+              text: "Know your audience"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+            }
+          },
+            {
+            heading: {
+              text: "How people read"
+            },
+            content: {
+              html: "<p class='govuk-body'>This is the content for How people read.</p>"
+            }
+          }
+        ]
+      }) }}
+  </div> 
+  </div>
+ <div class="govuk-grid-column-one-third">     
+    <aside class="sidebar">
+      <h2 class="govuk-heading-m">To qualify for legal aid:</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your income (or combined income if you have a partner) shouldn’t be more than £2,657 a month before tax</li>
+        <li>your savings (or combined savings if you have a partner) shouldn’t be more than £8,000</li>
+      </ul>
+      <p class="govuk-body-s">
+        These limits can vary in certain circumstances – for example, if you need advice about domestic abuse.
+      </p>
+      </aside>
+  </div>
+{% endblock %}
